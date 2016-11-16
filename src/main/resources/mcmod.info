@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fallcraft",
+  "name": "Fallout Craft Mod",
+  "description": "I don't want to set the world on fire...",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://fallout.today/",
+  "updateUrl": "",
+  "authorList": ["TaoGunner"],
+  "credits": "Thanks http://mcmodding.ru community",
+  "logoFile": "assets/fallcraft/fallcraft_logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
