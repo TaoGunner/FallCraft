@@ -10,8 +10,5 @@ public class FCBlockDoubleSlab extends FCBlockSlab
 	}
 
 	@Override
-	public boolean isDouble()
-	{
-		return true;
-	}
+	public boolean isDouble() { return true; }
 }

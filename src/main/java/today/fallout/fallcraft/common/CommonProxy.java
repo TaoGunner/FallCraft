@@ -12,8 +12,8 @@ public class CommonProxy
 
 	public void preInit()
 	{
-		CommonRegistryHandler.registerItems();
 		CommonRegistryHandler.registerBlocks();
+		CommonRegistryHandler.registerItems();
 		NetworkHandler.registerPackets();
 	}
 }
