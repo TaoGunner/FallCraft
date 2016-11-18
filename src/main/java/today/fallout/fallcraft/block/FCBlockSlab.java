@@ -23,10 +23,6 @@ public abstract class FCBlockSlab extends BlockSlab
 		this.setUnlocalizedName(this.getRegistryName().toString());
 		if (!this.isDouble()) this.setCreativeTab(blockCreativeTab);
 
-		// IBlockState blockState = this.blockState.getBaseState();
-		// if (!this.isDouble()) blockState = blockState.withProperty(HALF, EnumBlockHalf.BOTTOM);
-		// setDefaultState(blockState);
-
 		GameRegistry.register(this);
 	}
 
@@ -67,6 +63,6 @@ public abstract class FCBlockSlab extends BlockSlab
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return this.isDouble() ? new BlockStateContainer(this): new BlockStateContainer(this, new IProperty[] {HALF});
+		return this.isDouble() ? new BlockStateContainer(this): new BlockStateContainer(this, HALF);
 	}
 }

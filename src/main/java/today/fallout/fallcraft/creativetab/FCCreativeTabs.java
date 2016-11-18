@@ -9,42 +9,42 @@ import today.fallout.fallcraft.FallCraftMod;
 
 public class FCCreativeTabs
 {
-	public static final CreativeTabs TAB_WEAPON = new CreativeTabs(FallCraftMod.MODID + "." + "weapon")
+	public static final CreativeTabs TAB_WEAPON = new CreativeTabs(FallCraftMod.MODID + ":" + "weapon")
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() { return Items.FLOWER_POT; }
 	};
 
-	public static final CreativeTabs TAB_AMMO = new CreativeTabs(FallCraftMod.MODID + "." + "ammo")
+	public static final CreativeTabs TAB_AMMO = new CreativeTabs(FallCraftMod.MODID + ":" + "ammo")
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() { return Items.APPLE; }
 	};
 
-	public static final CreativeTabs TAB_MISC = new CreativeTabs(FallCraftMod.MODID + "." + "misc")
+	public static final CreativeTabs TAB_MISC = new CreativeTabs(FallCraftMod.MODID + ":" + "misc")
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() { return Items.IRON_CHESTPLATE; }
 	};
 
-	public static final CreativeTabs TAB_USABLE = new CreativeTabs(FallCraftMod.MODID + "." + "usable")
+	public static final CreativeTabs TAB_USABLE = new CreativeTabs(FallCraftMod.MODID + ":" + "usable")
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() { return Items.GOLDEN_HOE; }
 	};
 
-	public static final CreativeTabs TAB_ARMOR = new CreativeTabs(FallCraftMod.MODID + "." + "armor")
+	public static final CreativeTabs TAB_ARMOR = new CreativeTabs(FallCraftMod.MODID + ":" + "armor")
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() { return Items.SNOWBALL; }
 	};
 
-	public static final CreativeTabs TAB_BLOCK = new CreativeTabs(FallCraftMod.MODID + "." + "block")
+	public static final CreativeTabs TAB_BLOCK = new CreativeTabs(FallCraftMod.MODID + ":" + "block")
 	{
 		@Override
 		@SideOnly(Side.CLIENT)

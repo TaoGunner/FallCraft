@@ -29,6 +29,6 @@ public class CommonRegistryHandler
 		block_metal_wall = new FCBlockWall(block_metal, "metal_wall", TAB_BLOCK);
 		block_metal_fence = new FCBlockFence("metal_fence", TAB_BLOCK);
 		block_metal_slab = new FCBlockHalfSlab("metal_slab", TAB_BLOCK);
-		block_metal_double_slab = new FCBlockDoubleSlab("metal_upper_slab.json", TAB_BLOCK);
+		block_metal_double_slab = new FCBlockDoubleSlab("metal_double_slab", TAB_BLOCK);
 	}
 }

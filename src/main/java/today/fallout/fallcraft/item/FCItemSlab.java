@@ -57,19 +57,14 @@ public class FCItemSlab extends ItemBlock
 	{
 		if (stack.stackSize != 0 && playerIn.canPlayerEdit(pos.offset(facing), facing, stack))
 		{
-			//Comparable<?> comparable = this.singleSlab.getTypeForItem(stack);
 			IBlockState iblockstate = worldIn.getBlockState(pos);
 
 			if (iblockstate.getBlock() == this.singleSlab)
 			{
-				//IProperty<?> iproperty = this.singleSlab.getVariantProperty();
-				//Comparable<?> comparable1 = iblockstate.getValue(iproperty);
 				BlockSlab.EnumBlockHalf blockslab$enumblockhalf = (BlockSlab.EnumBlockHalf)iblockstate.getValue(BlockSlab.HALF);
 
-				// if ((facing == EnumFacing.UP && blockslab$enumblockhalf == BlockSlab.EnumBlockHalf.BOTTOM || facing == EnumFacing.DOWN && blockslab$enumblockhalf == BlockSlab.EnumBlockHalf.TOP) && comparable1 == comparable)
 				if (facing == EnumFacing.UP && blockslab$enumblockhalf == BlockSlab.EnumBlockHalf.BOTTOM || facing == EnumFacing.DOWN && blockslab$enumblockhalf == BlockSlab.EnumBlockHalf.TOP)
 				{
-					//IBlockState iblockstate1 = this.makeState(iproperty, comparable1);
 					IBlockState iblockstate1 = this.doubleSlab.getDefaultState();
 					AxisAlignedBB axisalignedbb = iblockstate1.getCollisionBoundingBox(worldIn, pos);
 
@@ -97,21 +92,17 @@ public class FCItemSlab extends ItemBlock
 	public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side, EntityPlayer player, ItemStack stack)
 	{
 		BlockPos blockpos = pos;
-		//IProperty<?> iproperty = this.singleSlab.getVariantProperty();
-		//Comparable<?> comparable = this.singleSlab.getTypeForItem(stack);
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 
 		if (iblockstate.getBlock() == this.singleSlab)
 		{
 			boolean flag = iblockstate.getValue(BlockSlab.HALF) == BlockSlab.EnumBlockHalf.TOP;
-
-			// if ((side == EnumFacing.UP && !flag || side == EnumFacing.DOWN && flag) && comparable == iblockstate.getValue(iproperty))
 			if ((side == EnumFacing.UP && !flag || side == EnumFacing.DOWN && flag)) return true;
 		}
 
 		pos = pos.offset(side);
 		IBlockState iblockstate1 = worldIn.getBlockState(pos);
-		// return iblockstate1.getBlock() == this.singleSlab && comparable == iblockstate1.getValue(iproperty) ? true : super.canPlaceBlockOnSide(worldIn, blockpos, side, player, stack);
+
 		return iblockstate1.getBlock() == this.singleSlab ? true : super.canPlaceBlockOnSide(worldIn, blockpos, side, player, stack);
 	}
 
@@ -121,23 +112,17 @@ public class FCItemSlab extends ItemBlock
 
 		if (iblockstate.getBlock() == this.singleSlab)
 		{
-			// Comparable<?> comparable = iblockstate.getValue(this.singleSlab.getVariantProperty());
+			IBlockState iblockstate1 = this.doubleSlab.getDefaultState();
+			AxisAlignedBB axisalignedbb = iblockstate1.getCollisionBoundingBox(worldIn, pos);
 
-			//if (comparable == itemSlabType)
-			//{
-				// IBlockState iblockstate1 = this.makeState(this.singleSlab.getVariantProperty(), comparable);
-				IBlockState iblockstate1 = this.doubleSlab.getDefaultState();
-				AxisAlignedBB axisalignedbb = iblockstate1.getCollisionBoundingBox(worldIn, pos);
+			if (axisalignedbb != Block.NULL_AABB && worldIn.checkNoEntityCollision(axisalignedbb.offset(pos)) && worldIn.setBlockState(pos, iblockstate1, 11))
+			{
+				SoundType soundtype = this.doubleSlab.getSoundType(iblockstate1, worldIn, pos, player);
+				worldIn.playSound(player, pos, soundtype.getPlaceSound(), SoundCategory.BLOCKS, (soundtype.getVolume() + 1.0F) / 2.0F, soundtype.getPitch() * 0.8F);
+				--stack.stackSize;
+			}
 
-				if (axisalignedbb != Block.NULL_AABB && worldIn.checkNoEntityCollision(axisalignedbb.offset(pos)) && worldIn.setBlockState(pos, iblockstate1, 11))
-				{
-					SoundType soundtype = this.doubleSlab.getSoundType(iblockstate1, worldIn, pos, player);
-					worldIn.playSound(player, pos, soundtype.getPlaceSound(), SoundCategory.BLOCKS, (soundtype.getVolume() + 1.0F) / 2.0F, soundtype.getPitch() * 0.8F);
-					--stack.stackSize;
-				}
-
-				return true;
-			//}
+			return true;
 		}
 
 		return false;
