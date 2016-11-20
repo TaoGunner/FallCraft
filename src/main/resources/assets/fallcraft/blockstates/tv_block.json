@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "fallcraft:tv_block" },
+    "facing=east":  { "model": "fallcraft:tv_block", "y": 90 },
+    "facing=south": { "model": "fallcraft:tv_block", "y": 180 },
+    "facing=west":  { "model": "fallcraft:tv_block", "y": 270 }
+  }
+}

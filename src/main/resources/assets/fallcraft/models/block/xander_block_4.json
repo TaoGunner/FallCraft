@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "fallcraft:blocks/xander_block_4"
+  }
+}

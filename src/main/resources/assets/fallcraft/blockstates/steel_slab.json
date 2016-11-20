@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "fallcraft:steel_half_slab" },
+        "half=top": { "model": "fallcraft:steel_upper_slab" }
+    }
+}

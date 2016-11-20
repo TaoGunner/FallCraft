@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"variant=0": { "model": "fallcraft:crate_light_block_0" },
+		"variant=1": { "model": "fallcraft:crate_light_block_1" },
+		"variant=2": { "model": "fallcraft:crate_light_block_2" },
+		"variant=3": { "model": "fallcraft:crate_light_block_3" }
+	}
+}

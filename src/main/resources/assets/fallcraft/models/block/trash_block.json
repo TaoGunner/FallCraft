@@ -1,0 +1,111 @@
+{
+	"textures": {
+		"particle": "fallcraft:blocks/trash_3",
+		"0": "fallcraft:blocks/trash_1",
+		"1": "fallcraft:blocks/trash_2"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [ 90, 0, 0 ],
+			"translation": [ 0.00, -1.50, -2.50 ],
+			"scale": [ 0.70, 0.70, 0.70 ]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [ 90, 0, 0 ],
+			"translation": [ 0.00, -1.50, -2.50 ],
+			"scale": [ 0.70, 0.70, 0.70 ]
+		},
+		"firstperson_righthand": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.00, 0.00, 0.00 ],
+			"scale": [ 0.70, 0.70, 0.70 ]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.00, 0.00, 0.00 ],
+			"scale": [ 0.70, 0.70, 0.70 ]
+		},
+		"gui": {
+			"rotation": [ 30, 330, 0 ],
+			"translation": [ 0.00, 1.00, 0.00 ],
+			"scale": [ 0.80, 0.80, 0.80 ]
+		},
+		"head": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.00, 0.00, 0.00 ],
+			"scale": [ 1.00, 1.00, 1.00 ]
+		},
+		"fixed": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.00, 2.00, 1.00 ],
+			"scale": [ 1.00, 1.00, 1.00 ]
+		},
+		"ground": {
+			"rotation": [ 0, 0, 0 ],
+			"translation": [ 0.00, 3.00, 0.00 ],
+			"scale": [ 0.50, 0.50, 0.50 ]
+		}
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [ 3, 0, 3 ], 
+			"to": [ 13, 10, 13 ], 
+			"faces": {
+				"north": { "texture": "#0", "uv": [ 0, 0, 10, 10 ] },
+				"east": { "texture": "#0", "uv": [ 0, 0, 10, 10 ] },
+				"south": { "texture": "#0", "uv": [ 0, 0, 10, 10 ] },
+				"west": { "texture": "#0", "uv": [ 0, 0, 10, 10 ] },
+				"down": { "texture": "#0", "uv": [ 0, 0, 10, 10 ] }
+			}
+		},
+		{
+			"name": "head",
+			"from": [ 2, 10, 2 ], 
+			"to": [ 14, 11, 14 ], 
+			"faces": {
+				"north": { "texture": "#1", "uv": [ 0, 13, 12, 14 ] },
+				"east": { "texture": "#1", "uv": [ 0, 13, 12, 14 ] },
+				"south": { "texture": "#1", "uv": [ 0, 13, 12, 14 ] },
+				"west": { "texture": "#1", "uv": [ 0, 13, 12, 14 ] },
+				"up": { "texture": "#1", "uv": [ 0, 0, 12, 12 ] },
+				"down": { "texture": "#1", "uv": [ 0, 0, 12, 12 ] }
+			}
+		},
+		{
+			"name": "gripL",
+			"from": [ 5, 11, 7.5 ], 
+			"to": [ 6, 12, 8.5 ], 
+			"faces": {
+				"north": { "texture": "#0", "uv": [ 7, 11, 8, 12 ] },
+				"east": { "texture": "#0", "uv": [ 7, 11, 8, 12 ] },
+				"south": { "texture": "#0", "uv": [ 7, 11, 8, 12 ] },
+				"west": { "texture": "#0", "uv": [ 7, 11, 8, 12 ] }
+			}
+		},
+		{
+			"name": "gripR",
+			"from": [ 10, 11, 7.5 ], 
+			"to": [ 11, 12, 8.5 ], 
+			"faces": {
+				"north": { "texture": "#0", "uv": [ 9, 11, 10, 12 ] },
+				"east": { "texture": "#0", "uv": [ 9, 11, 10, 12 ] },
+				"south": { "texture": "#0", "uv": [ 9, 11, 10, 12 ] },
+				"west": { "texture": "#0", "uv": [ 9, 11, 10, 12 ] }
+			}
+		},
+		{
+			"name": "gripC",
+			"from": [ 5, 12, 7.5 ], 
+			"to": [ 11, 13, 8.5 ], 
+			"faces": {
+				"north": { "texture": "#0", "uv": [ 0, 11, 6, 12 ] },
+				"east": { "texture": "#0", "uv": [ 9, 11, 10, 12 ] },
+				"south": { "texture": "#0", "uv": [ 0, 11, 6, 12 ] },
+				"west": { "texture": "#0", "uv": [ 7, 11, 8, 12 ] },
+				"up": { "texture": "#0", "uv": [ 0, 11, 6, 12 ] },
+				"down": { "texture": "#0", "uv": [ 0, 11, 6, 12 ] }
+			}
+		}
+	]
+}
