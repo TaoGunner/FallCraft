@@ -14,6 +14,7 @@ public class CommonProxy
 	{
 		CommonRegistryHandler.registerBlocks();
 		CommonRegistryHandler.registerItems();
+		CommonRegistryHandler.registerEntities();
 		NetworkHandler.registerPackets();
 	}
 }
