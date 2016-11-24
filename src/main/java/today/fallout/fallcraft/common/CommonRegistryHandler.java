@@ -8,9 +8,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import today.fallout.fallcraft.FallCraftMod;
 import today.fallout.fallcraft.block.*;
 import today.fallout.fallcraft.entity.monster.*;
+import today.fallout.fallcraft.item.FCItem3D;
 import today.fallout.fallcraft.item.FCItemSlab;
 
 import static today.fallout.fallcraft.creativetab.FCCreativeTabs.TAB_BLOCK;
+import static today.fallout.fallcraft.creativetab.FCCreativeTabs.TAB_WEAPON;
 
 public class CommonRegistryHandler
 {
@@ -40,12 +42,15 @@ public class CommonRegistryHandler
 	public static BlockSlab block_steel_double_slab;
 
 	// ITEMS
-	public static Item item_xander_seed;
+	public static Item item_pistol_223;
+
 
 	public static void registerItems()
 	{
 		GameRegistry.register(new FCItemSlab(block_metal_slab, block_metal_slab, block_metal_double_slab));
 		GameRegistry.register(new FCItemSlab(block_steel_slab, block_steel_slab, block_steel_double_slab));
+
+		item_pistol_223 = new FCItem3D("pistol_223", TAB_WEAPON);
 	}
 
 	public static void registerBlocks()

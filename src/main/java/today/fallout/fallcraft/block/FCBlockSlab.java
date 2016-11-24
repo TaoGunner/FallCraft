@@ -41,6 +41,7 @@ public abstract class FCBlockSlab extends BlockSlab
 	public Comparable<?> getTypeForItem(ItemStack stack) { return null; }
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public IBlockState getStateFromMeta(int meta)
 	{
 		IBlockState iblockstate = this.getDefaultState();
