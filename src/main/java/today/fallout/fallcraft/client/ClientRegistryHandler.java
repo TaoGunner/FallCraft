@@ -1,12 +1,18 @@
 package today.fallout.fallcraft.client;
 
+import net.minecraft.client.model.ModelBiped;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import today.fallout.fallcraft.client.model.*;
+import today.fallout.fallcraft.client.model.armor.ModelChestplateMetal;
+import today.fallout.fallcraft.client.model.armor.ModelHelmetMetal;
 import today.fallout.fallcraft.client.renderer.entity.*;
 import today.fallout.fallcraft.entity.monster.*;
 
 public class ClientRegistryHandler
 {
+	public static ModelBiped modelChestplateMetal = new ModelChestplateMetal();
+	public static ModelBiped modelHelmetMetal = new ModelHelmetMetal();
+
 	public static void registerEntityRenderer()
 	{
 		RenderingRegistry.registerEntityRenderingHandler(EntityAnt.class, renderManager -> new RenderAnt(renderManager, new ModelAnt(), 0.5F));

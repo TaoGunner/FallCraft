@@ -11,6 +11,11 @@ import today.fallout.fallcraft.FallCraftMod;
 
 public class FCItem extends Item
 {
+	public FCItem(String itemName, CreativeTabs itemCreativeTab)
+	{
+		this(itemName, itemCreativeTab, 1, 0);
+	}
+
 	public FCItem(String itemName, CreativeTabs itemCreativeTab, int itemStackSize)
 	{
 		this(itemName, itemCreativeTab, itemStackSize, 0);
